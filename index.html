@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<body style="background-color: orange">
+    <h1>MAIN PAGE OF MY FINAL PRACTICE</h1>
+    <ul>
+
+    <br>OPTION 1:</br>
+    <li>List the names of all the species available in the database.</li>
+    <form action="listSpecies" method="get">
+
+    <input type="submit"/>
+    </form>
+    <p></p>
+
+    <br>OPTION 2:</br>
+    <li>Type a species to get information about the karyotype</li>
+    <form action="karyotype" method="get">
+        Species:  <input type="text" name="specie">
+
+    <input type="submit"/>
+    </form>
+
+
+    <p></p>
+    <br>OPTION 3:</br>
+    <li>Length of a chromosome of a species</li>
+        <form action="chromosomeLength" method="get">
+            <li>Species and chromosome desired:</li>
+        Species:<input type="text" name="specie">
+        Chromosome: <input type="text" name="chromo">
+
+
+    <input type="submit"/>
+    </form>
+</ul>
+</body>
+</html>
