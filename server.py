@@ -101,8 +101,16 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
         contents = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Species List</title></head>' \
                    '<body><h1>List of all available species:</h1><ol>' \
                    '<body style = "background-color: yellow" >'
+        try:
+            limit= self.path.split('=')[1].split('&')[0]
 
-        for index in range(len(d['species'])):
+        except IndexError:
+            limit= 199
+
+        if limit == '':
+            limit = len(d['species'])
+
+        for index in range(int(limit)):
             contents += "<li>"
             contents += d['species'][index]['common_name']
             contents += "</li>"
